@@ -1,0 +1,12 @@
+commands: [
+  {
+    name: "compile"
+    command: "C:/Program Files/erl9.3/bin/escript"
+    arguments: [
+      "{FileName}"
+    ]
+    options:
+      cwd: "{FileDir}"
+      keymap: 'f5'
+  }
+]
