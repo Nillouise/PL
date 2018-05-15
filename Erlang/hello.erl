@@ -2,6 +2,7 @@
 fa(0)->1;
 fa(N)->N*fa(N-1).
 
+
 cal10(10)->
     io:format("~p~n",[10]);
 cal10(X)->
@@ -25,8 +26,6 @@ reverseList([Head|Tail])->
 
 
 myqsort(List)->recursionSort(List).
-
-
 recursionSort([])->[];
 recursionSort([Mid|Tail])->
     {F,T} = putMid(Tail,Mid),
