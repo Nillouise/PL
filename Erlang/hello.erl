@@ -43,11 +43,18 @@ putMid([Head|Tail],Mid)->
     end;
 putMid([],Mid)->{[],[]}.
 
+% 这里还不知道怎么处理字符串后面的空格
+trim([])->[];
+trim([H|T])->
+    if
+        H==32 ->
+            trim(T);
+        true->
+            [H]++[T]
+    end.
+
 
 main(_) ->
-    string:casefold("Ω and ẞ SHARP S"),
-    io:format("count ~p~n",[wordCount("fsdf fdf")]),
-    io:format("~p~p~n",reverseList(["fdsf","abcs"])),
-    io:format("sorted list:~p~p~p~p~n", myqsort([4,1,100,5])),
+    io:format("~p~n",[trim(" fsdf")]),
     myqsort([]),
 	io:format("Hello, World !!~n").
